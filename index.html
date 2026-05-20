@@ -93,40 +93,61 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
                 <!-- Project 1 -->
-                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-blue-500/10 rounded-2xl text-blue-400">
-                            <i data-lucide="search" class="w-6 h-6"></i>
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-blue-500/10 rounded-2xl text-blue-400">
+                                <i data-lucide="search" class="w-6 h-6"></i>
+                            </div>
+                            <a href="https://vyshnavivissa2211-ai-visual-search.hf.space/ui" target="_blank">
+                                <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-blue-400 transition-colors"></i>
+                            </a>
                         </div>
-                        <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-blue-400 transition-colors"></i>
+                        <h3 class="text-xl font-bold mb-3">AI-Powered Visual Search & Product Discovery Engine</h3>
+                        <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
+                            <li>Built a scalable multimodal AI search engine supporting image, text, and hybrid search queries.</li>
+                            <li>Implemented CLIP embeddings and FAISS vector search for semantic similarity retrieval.</li>
+                            <li>Integrated LLM-powered query understanding and metadata-aware filtering.</li>
+                            <li>Designed scalable FastAPI backend services for low-latency real-time inference and semantic retrieval.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FastAPI</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">CLIP</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FAISS</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">AI-Powered Visual Search & Product Discovery Engine</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        A multimodal search engine using CLIP embeddings and FAISS for semantic similarity, allowing users to search via text or image inputs.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FastAPI</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">CLIP</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FAISS</span>
+                    <div class="flex gap-4 text-sm font-semibold pt-2">
+                        <a href="https://vyshnavivissa2211-ai-visual-search.hf.space/ui" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1">Live Demo <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                        <span class="text-slate-700">|</span>
+                        <a href="https://github.com/vyshnavivissa/AI-Powered-Visual-Search-and-Product-Discovery-Engine.io" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors inline-flex items-center gap-1">GitHub Repository <i data-lucide="github" class="w-3 h-3"></i></a>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
-                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
-                            <i data-lucide="cpu" class="w-6 h-6"></i>
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank">
+                                <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
+                            </a>
                         </div>
-                        <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
+                        <h3 class="text-xl font-bold mb-3">AI-Powered Meeting Intelligence System</h3>
+                        <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
+                            <li>Developed an AI-powered platform for meeting transcription, summarization, and action-item extraction.</li>
+                            <li>Designed scalable FastAPI backend services supporting concurrent meeting sessions.</li>
+                            <li>Implemented transcript visualization and structured insight generation workflows.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">NLP</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Speech-to-Text</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">FastAPI</span>
+                        </div>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">AI-Powered Meeting Intelligence System</h3>
-                    <p class="text-slate-400 text-sm mb-6 leading-relaxed">
-                        An end-to-end platform for automated transcription, summarization, and action-item extraction using LLM pipelines.
-                    </p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">NLP</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Speech-to-Text</span>
-                        <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">FastAPI</span>
+                    <div class="pt-2 text-sm font-semibold">
+                        <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
                     </div>
                 </div>
 
@@ -136,19 +157,28 @@
                         <div class="p-3 bg-cyan-500/10 rounded-2xl text-cyan-400">
                             <i data-lucide="wind" class="w-6 h-6"></i>
                         </div>
-                        <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                        <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank">
+                            <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                        </a>
                     </div>
                     <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold mb-3">Next-Gen Hurricane Intensity Estimation</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Leveraging 114K+ satellite images and TIMM architectures to predict cyclone intensity. This project was integrated into a research publication.
-                            </p>
+                        <div class="flex flex-col justify-between">
+                            <div>
+                                <h3 class="text-xl font-bold mb-3">Next-Generation Hurricane Intensity Estimation Using Enhanced TIMM Architectures</h3>
+                                <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside">
+                                    <li>Developed deep learning models using 114K+ satellite images for hurricane intensity prediction.</li>
+                                    <li>Deployed inference using Streamlit and contributed to a research publication.</li>
+                                </ul>
+                            </div>
+                            <div class="pt-2 text-sm font-semibold">
+                                <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1">Publication <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                            </div>
                         </div>
                         <div class="space-y-3">
                             <div class="flex flex-wrap gap-2">
                                 <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">PyTorch</span>
                                 <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">TIMM</span>
+                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">Streamlit</span>
                                 <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">Computer Vision</span>
                             </div>
                             <ul class="text-xs text-slate-500 space-y-1">
