@@ -14,15 +14,19 @@
             backdrop-filter: blur(10px);
             border: 1px solid rgba(255, 255, 255, 0.06);
         }
-        .gradient-border {
-            border-image: linear-gradient(to right, #3b82f6, #06b6d4) 1;
-        }
         .skill-tag {
             transition: all 0.15s ease;
         }
         .skill-tag:hover {
             transform: scale(1.02);
             border-color: #60a5fa;
+        }
+        .skill-category {
+            border-left: 2px solid transparent;
+            transition: border-color 0.3s;
+        }
+        .skill-category:hover {
+            border-left-color: #3b82f6;
         }
     </style>
 </head>
@@ -34,6 +38,7 @@
             <span class="text-xl font-bold tracking-tighter text-blue-400">VYSHNAVI.</span>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
                 <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
+                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
                 <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
                 <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
             </div>
@@ -51,12 +56,15 @@
             </h1>
             <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
                 Specializing in <span class="text-slate-100">Generative AI · MLOps · Computer Vision</span> <br />
-                Building production-grade intelligence with end-to-end ML pipelines, monitoring, and scalable deployment.
+                Building production-grade intelligence with end-to-end ML pipelines, LLM agents, and scalable deployment.
             </p>
             
             <div class="flex flex-wrap justify-center gap-4">
                 <a href="mailto:vyshnavivissa@gmail.com" class="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full font-semibold transition-all">
-                    <i data-lucide="mail" class="w-5 h-5"></i> Contact Me
+                    <i data-lucide="mail" class="w-5 h-5"></i> Email Me
+                </a>
+                <a href="tel:+919985644204" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded-full font-semibold transition-all border border-slate-700">
+                    <i data-lucide="phone" class="w-5 h-5"></i> +91 99856 44204
                 </a>
                 <div class="flex items-center gap-4 px-6">
                     <a href="https://linkedin.com/in/vyshnavi-vissa-47b2952a0" class="text-slate-400 hover:text-blue-400 transition-colors"><i data-lucide="linkedin"></i></a>
@@ -66,31 +74,183 @@
         </div>
     </header>
 
-    <!-- Skills Section (expanded with MLOps, CI/CD, Docker, Kubernetes, NLP, CV) -->
-    <section class="py-12 bg-slate-900/40 border-y border-slate-800/50">
+    <!-- Expanded Skills Section -->
+    <section id="skills" class="py-16 bg-slate-900/40 border-y border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="brain" class="w-4 h-4"></i> GenAI & NLP</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">LangChain · RAG · Transformers · BERT · CLIP</p>
+            <h2 class="text-3xl font-bold mb-12 text-center flex items-center justify-center gap-4">
+                <span class="h-[1px] w-12 bg-slate-800"></span>
+                Technical Expertise
+                <span class="h-[1px] w-12 bg-slate-800"></span>
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Languages & Frameworks -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-blue-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="code" class="w-5 h-5"></i> Languages & Frameworks
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Python</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">SQL</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">JavaScript</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">FastAPI</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">React.js</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Streamlit</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">REST APIs</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Uvicorn</span>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="cpu" class="w-4 h-4"></i> MLOps</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">MLflow · DVC · Evidently · OpenLineage · Prometheus</p>
+
+                <!-- Generative AI & LLMs -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-purple-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="sparkles" class="w-5 h-5"></i> Generative AI & LLMs
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">LangChain</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">LangGraph</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">RAG</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Prompt Engineering</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Embeddings</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">FAISS</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Pinecone</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Vector Search</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">AI Agents</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">OpenAI APIs</span>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="container" class="w-4 h-4"></i> DevOps</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">Docker · Kubernetes · CI/CD · ArgoCD · GitHub Actions</p>
+
+                <!-- Machine Learning -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-cyan-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="brain" class="w-5 h-5"></i> Machine Learning
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Scikit-learn</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">XGBoost</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Logistic Regression</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Feature Engineering</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Hyperparameter Tuning</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Regression</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Classification</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Clustering</span>
+                    </div>
                 </div>
-                <div>
-                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="eye" class="w-4 h-4"></i> Computer Vision</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">PyTorch · TIMM · FAISS · Streamlit · OpenCV</p>
+
+                <!-- Deep Learning -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-rose-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="cpu" class="w-5 h-5"></i> Deep Learning
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">TensorFlow</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">PyTorch</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">CNN</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">RNN</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">LSTM</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Transformers</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Transfer Learning</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Fine-tuning</span>
+                    </div>
                 </div>
+
+                <!-- NLP & Computer Vision -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-emerald-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="eye" class="w-5 h-5"></i> NLP & Computer Vision
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Sentiment Analysis</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Text Classification</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Semantic Search</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">TF-IDF</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Sentence Transformers</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Multilingual NLP</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">CLIP</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Image Embeddings</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Visual Search</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Multimodal AI</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-yellow-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="database" class="w-5 h-5"></i> Databases
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">MySQL</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">PostgreSQL</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Vector Databases</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Pinecone</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">FAISS</span>
+                    </div>
+                </div>
+
+                <!-- MLOps & LLMOps -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-indigo-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="gauge" class="w-5 h-5"></i> MLOps & LLMOps
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">MLflow</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">DVC</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Great Expectations</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Evidently AI</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">OpenLineage</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Marquez</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Promptfoo</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Model Monitoring</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Experiment Tracking</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Data Validation</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Data Versioning</span>
+                    </div>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-orange-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="cloud" class="w-5 h-5"></i> DevOps & Cloud
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Docker</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Docker Compose</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">CI/CD</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">GitHub Actions</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Kubernetes (Basics)</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Prometheus</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Grafana</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Data Drift Monitoring</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Lineage Tracking</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">AWS EC2</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">AWS S3</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">AWS IAM</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">AWS Glue</span>
+                    </div>
+                </div>
+
+                <!-- Concepts -->
+                <div class="glass-card p-6 rounded-2xl skill-category pl-5">
+                    <h4 class="text-teal-400 font-bold mb-3 flex items-center gap-2">
+                        <i data-lucide="lightbulb" class="w-5 h-5"></i> Core Concepts
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Distributed Systems</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Data Pipelines</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">Model Deployment</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">RAG Systems</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">LLM Agents</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">MLOps</span>
+                        <span class="px-3 py-1 bg-slate-800/70 rounded-lg text-xs font-mono text-slate-300 border border-slate-700/50 skill-tag">LLMOps</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Grid (including YouTube Comment Analyzer MLOps project) -->
+    <!-- Projects Grid -->
     <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
@@ -122,6 +282,7 @@
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">CLIP</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FAISS</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Docker</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Multimodal</span>
                         </div>
                     </div>
                     <div class="flex gap-4 text-sm font-semibold pt-2">
@@ -131,14 +292,14 @@
                     </div>
                 </div>
 
-                <!-- Project 2: YouTube Comment Analyzer – End-to-End MLOps (new) -->
+                <!-- Project 2: YouTube Comment Analyzer -->
                 <div class="glass-card p-8 rounded-3xl group hover:border-indigo-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-6">
                             <div class="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
                                 <i data-lucide="message-square" class="w-6 h-6"></i>
                             </div>
-                            <a href="https://github.com/vyshnavivissa/youtube-comment-analyzer" target="_blank">
+                            <a href="https://github.com/vyshnavivissa/youtube_comments_analyser_MLOPS_End_to_end_pipeline" target="_blank">
                                 <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
                             </a>
                         </div>
@@ -160,10 +321,11 @@
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Docker</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Kubernetes</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">CI/CD</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">XGBoost</span>
                         </div>
                     </div>
                     <div class="flex gap-4 text-sm font-semibold pt-2">
-                        <a href="https://github.com/vyshnavivissa/youtube-comment-analyzer" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
+                        <a href="https://github.com/vyshnavivissa/youtube_comments_analyser_MLOPS_End_to_end_pipeline" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
                         <span class="text-slate-700">|</span>
                         <a href="#" class="text-slate-300 hover:text-indigo-400 transition-colors inline-flex items-center gap-1">Grafana Dashboard <i data-lucide="external-link" class="w-3 h-3"></i></a>
                     </div>
@@ -191,97 +353,4 @@
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Speech-to-Text</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FastAPI</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Docker</span>
-                        </div>
-                    </div>
-                    <div class="pt-2 text-sm font-semibold">
-                        <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
-                    </div>
-                </div>
-
-                <!-- Project 4: Hurricane Intensity (Computer Vision) -->
-                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-start mb-6">
-                            <div class="p-3 bg-rose-500/10 rounded-2xl text-rose-400">
-                                <i data-lucide="wind" class="w-6 h-6"></i>
-                            </div>
-                            <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank">
-                                <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-rose-400 transition-colors"></i>
-                            </a>
-                        </div>
-                        <h3 class="text-xl font-bold mb-3">Hurricane Intensity Estimation (CV)</h3>
-                        <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
-                            <li>Deep learning with 114K+ satellite images (PyTorch, TIMM).</li>
-                            <li>Transfer learning & Streamlit deployment.</li>
-                            <li>Published research in Natural Hazards journal.</li>
-                        </ul>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">PyTorch</span>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">TIMM</span>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">Streamlit</span>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">OpenCV</span>
-                        </div>
-                    </div>
-                    <div class="pt-2 text-sm font-semibold">
-                        <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank" class="text-rose-400 hover:text-rose-300 transition-colors inline-flex items-center gap-1">Publication <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience & Education -->
-    <section id="experience" class="py-24 bg-slate-900/30 px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-20">
-            
-            <div>
-                <h2 class="text-2xl font-bold mb-10 text-blue-400">Experience</h2>
-                <div class="space-y-10 border-l border-slate-800 ml-4">
-                    <div class="relative pl-10">
-                        <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_#3b82f6]"></div>
-                        <h4 class="font-bold">360DigiTMG</h4>
-                        <p class="text-sm text-slate-400 mb-2 font-medium">Data Science & AI Trainee</p>
-                        <p class="text-xs text-slate-500 leading-relaxed">Built regression, classification, clustering models; SQL workflows; MLOps foundations.</p>
-                    </div>
-                    <div class="relative pl-10">
-                        <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6px] top-1.5"></div>
-                        <h4 class="font-bold">Oasis Infobyte</h4>
-                        <p class="text-sm text-slate-400 mb-2 font-medium">Python Programming Intern</p>
-                        <p class="text-xs text-slate-500 leading-relaxed">Developed modular Python applications, core logic, debugging, and automation.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <h2 class="text-2xl font-bold mb-10 text-blue-400">Education</h2>
-                <div class="space-y-8">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <h4 class="font-bold">Bapatla Engineering College</h4>
-                        <p class="text-sm text-slate-400">B.Tech in ECE</p>
-                        <div class="mt-2 text-sm font-bold text-blue-400">CGPA: 8.94/10</div>
-                    </div>
-                    <div class="flex items-center gap-4 p-4 border border-slate-800 rounded-2xl">
-                        <i data-lucide="award" class="text-yellow-500"></i>
-                        <div>
-                            <h4 class="text-sm font-bold">NPTEL Certification</h4>
-                            <p class="text-xs text-slate-500">Data Analytics with Python (IIT Roorkee)</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <footer class="py-12 text-center border-t border-slate-900">
-        <p class="text-slate-600 text-xs tracking-widest uppercase font-bold">
-            © 2026 Vyshnavi Sai Sri Vissa • MLOps · GenAI · Computer Vision
-        </p>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html>
+                            <span class="px-3 py-1 bg-s
