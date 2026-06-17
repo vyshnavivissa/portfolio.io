@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vyshnavi Sai Sri Vissa | Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vyshnavi Sai Sri Vissa | AI/ML Engineer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap');
-        body { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
+        * { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
         .glass-card {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
         .gradient-border {
             border-image: linear-gradient(to right, #3b82f6, #06b6d4) 1;
         }
+        .skill-tag {
+            transition: all 0.15s ease;
+        }
+        .skill-tag:hover {
+            transform: scale(1.02);
+            border-color: #60a5fa;
+        }
     </style>
 </head>
-<body class="bg-slate-950 text-slate-100 overflow-x-hidden">
+<body class="bg-slate-950 text-slate-100 overflow-x-hidden antialiased">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-800">
+    <nav class="fixed top-0 w-full z-50 glass-card border-b border-slate-800/60">
         <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
             <span class="text-xl font-bold tracking-tighter text-blue-400">VYSHNAVI.</span>
             <div class="hidden md:flex gap-8 text-sm font-medium text-slate-400">
@@ -37,14 +44,14 @@
     <header id="about" class="pt-32 pb-20 px-6">
         <div class="max-w-4xl mx-auto text-center">
             <div class="inline-block px-3 py-1 mb-6 text-xs font-semibold tracking-widest text-blue-400 uppercase bg-blue-400/10 rounded-full">
-                AI Engineer & Developer
+                AI Engineer & MLOps Developer
             </div>
             <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
                 VYSHNAVI SAI SRI <span class="text-blue-500">VISSA</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 leading-relaxed max-w-2xl mx-auto mb-10">
-                Specializing in <span class="text-slate-100">Generative AI</span>, RAG systems, and multimodal search. 
-                Transforming complex data into production-ready intelligence.
+                Specializing in <span class="text-slate-100">Generative AI · MLOps · Computer Vision</span> <br />
+                Building production-grade intelligence with end-to-end ML pipelines, monitoring, and scalable deployment.
             </p>
             
             <div class="flex flex-wrap justify-center gap-4">
@@ -59,31 +66,31 @@
         </div>
     </header>
 
-    <!-- Skills Section -->
-    <section class="py-12 bg-slate-900/50">
+    <!-- Skills Section (expanded with MLOps, CI/CD, Docker, Kubernetes, NLP, CV) -->
+    <section class="py-12 bg-slate-900/40 border-y border-slate-800/50">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <h4 class="text-blue-400 font-bold mb-2">Generative AI</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">LangChain • RAG • Agents</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="brain" class="w-4 h-4"></i> GenAI & NLP</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest">LangChain · RAG · Transformers · BERT · CLIP</p>
                 </div>
-                <div class="text-center">
-                    <h4 class="text-blue-400 font-bold mb-2">Machine Learning</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">PyTorch • CNN • Transformers</p>
+                <div>
+                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="cpu" class="w-4 h-4"></i> MLOps</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest">MLflow · DVC · Evidently · OpenLineage · Prometheus</p>
                 </div>
-                <div class="text-center">
-                    <h4 class="text-blue-400 font-bold mb-2">Backend</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">FastAPI • Python • SQL</p>
+                <div>
+                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="container" class="w-4 h-4"></i> DevOps</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest">Docker · Kubernetes · CI/CD · ArgoCD · GitHub Actions</p>
                 </div>
-                <div class="text-center">
-                    <h4 class="text-blue-400 font-bold mb-2">Cloud</h4>
-                    <p class="text-xs text-slate-500 uppercase tracking-widest">AWS EC2 • S3 • Glue</p>
+                <div>
+                    <h4 class="text-blue-400 font-bold mb-2 flex items-center justify-center gap-1"><i data-lucide="eye" class="w-4 h-4"></i> Computer Vision</h4>
+                    <p class="text-xs text-slate-500 uppercase tracking-widest">PyTorch · TIMM · FAISS · Streamlit · OpenCV</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Grid -->
+    <!-- Projects Grid (including YouTube Comment Analyzer MLOps project) -->
     <section id="projects" class="py-24 px-6">
         <div class="max-w-6xl mx-auto">
             <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
@@ -92,7 +99,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 
-                <!-- Project 1 -->
+                <!-- Project 1: Visual Search -->
                 <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-6">
@@ -103,89 +110,120 @@
                                 <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-blue-400 transition-colors"></i>
                             </a>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">AI-Powered Visual Search & Product Discovery Engine</h3>
+                        <h3 class="text-xl font-bold mb-3">AI Visual Search & Product Discovery</h3>
                         <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
-                            <li>Built a scalable multimodal AI search engine supporting image, text, and hybrid search queries.</li>
-                            <li>Implemented CLIP embeddings and FAISS vector search for semantic similarity retrieval.</li>
-                            <li>Integrated LLM-powered query understanding and metadata-aware filtering.</li>
-                            <li>Designed scalable FastAPI backend services for low-latency real-time inference and semantic retrieval.</li>
+                            <li>Multimodal search engine supporting image, text, and hybrid queries.</li>
+                            <li>CLIP embeddings + FAISS vector search for semantic similarity.</li>
+                            <li>LLM-powered query understanding & metadata filtering.</li>
+                            <li>FastAPI backend for low-latency inference.</li>
                         </ul>
                         <div class="flex flex-wrap gap-2 mb-6">
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FastAPI</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">CLIP</span>
                             <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FAISS</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Docker</span>
                         </div>
                     </div>
                     <div class="flex gap-4 text-sm font-semibold pt-2">
                         <a href="https://vyshnavivissa2211-ai-visual-search.hf.space/ui" target="_blank" class="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1">Live Demo <i data-lucide="external-link" class="w-3 h-3"></i></a>
                         <span class="text-slate-700">|</span>
-                        <a href="https://github.com/vyshnavivissa/AI-Powered-Visual-Search-and-Product-Discovery-Engine.io" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors inline-flex items-center gap-1">GitHub Repository <i data-lucide="github" class="w-3 h-3"></i></a>
+                        <a href="https://github.com/vyshnavivissa/AI-Powered-Visual-Search-and-Product-Discovery-Engine.io" target="_blank" class="text-slate-300 hover:text-blue-400 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+                <!-- Project 2: YouTube Comment Analyzer – End-to-End MLOps (new) -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-indigo-500/50 transition-all flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-6">
                             <div class="p-3 bg-indigo-500/10 rounded-2xl text-indigo-400">
-                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                                <i data-lucide="message-square" class="w-6 h-6"></i>
                             </div>
-                            <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank">
+                            <a href="https://github.com/vyshnavivissa/youtube-comment-analyzer" target="_blank">
                                 <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-indigo-400 transition-colors"></i>
                             </a>
                         </div>
-                        <h3 class="text-xl font-bold mb-3">AI-Powered Meeting Intelligence System</h3>
+                        <h3 class="text-xl font-bold mb-3">YouTube Comment Analyzer – MLOps Pipeline</h3>
                         <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
-                            <li>Developed an AI-powered platform for meeting transcription, summarization, and action-item extraction.</li>
-                            <li>Designed scalable FastAPI backend services supporting concurrent meeting sessions.</li>
-                            <li>Implemented transcript visualization and structured insight generation workflows.</li>
+                            <li>End-to-end MLOps platform for multilingual sentiment analysis.</li>
+                            <li>Data validation (Great Expectations), versioning (DVC), experiment tracking (MLflow).</li>
+                            <li>Drift monitoring (Evidently AI), lineage (OpenLineage + Marquez), AI eval (Promptfoo).</li>
+                            <li>Dockerized FastAPI service with Prometheus & Grafana dashboards.</li>
+                            <li>Kubernetes-ready with CI/CD (GitHub Actions) and ArgoCD deployment.</li>
                         </ul>
                         <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">NLP</span>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Speech-to-Text</span>
-                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">FastAPI</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">MLflow</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">DVC</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Evidently</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">OpenLineage</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Prometheus</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Grafana</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Docker</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">Kubernetes</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-indigo-400">CI/CD</span>
                         </div>
                     </div>
-                    <div class="pt-2 text-sm font-semibold">
-                        <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
+                    <div class="flex gap-4 text-sm font-semibold pt-2">
+                        <a href="https://github.com/vyshnavivissa/youtube-comment-analyzer" target="_blank" class="text-indigo-400 hover:text-indigo-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
+                        <span class="text-slate-700">|</span>
+                        <a href="#" class="text-slate-300 hover:text-indigo-400 transition-colors inline-flex items-center gap-1">Grafana Dashboard <i data-lucide="external-link" class="w-3 h-3"></i></a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all md:col-span-2">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-cyan-500/10 rounded-2xl text-cyan-400">
-                            <i data-lucide="wind" class="w-6 h-6"></i>
+                <!-- Project 3: Meeting Intelligence -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-cyan-500/10 rounded-2xl text-cyan-400">
+                                <i data-lucide="cpu" class="w-6 h-6"></i>
+                            </div>
+                            <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank">
+                                <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
+                            </a>
                         </div>
-                        <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank">
-                            <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-cyan-400 transition-colors"></i>
-                        </a>
+                        <h3 class="text-xl font-bold mb-3">AI Meeting Intelligence System</h3>
+                        <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
+                            <li>Transcription, summarization, and action-item extraction from meetings.</li>
+                            <li>Scalable FastAPI backend with concurrent session handling.</li>
+                            <li>Real-time transcript visualization and structured insights.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">NLP</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Speech-to-Text</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">FastAPI</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-cyan-400">Docker</span>
+                        </div>
                     </div>
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div class="flex flex-col justify-between">
-                            <div>
-                                <h3 class="text-xl font-bold mb-3">Next-Generation Hurricane Intensity Estimation Using Enhanced TIMM Architectures</h3>
-                                <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside">
-                                    <li>Developed deep learning models using 114K+ satellite images for hurricane intensity prediction.</li>
-                                    <li>Deployed inference using Streamlit and contributed to a research publication.</li>
-                                </ul>
+                    <div class="pt-2 text-sm font-semibold">
+                        <a href="https://github.com/vyshnavivissa/AI-Powered-Meeting-Intelligence-System/tree/main" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1">GitHub <i data-lucide="github" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Hurricane Intensity (Computer Vision) -->
+                <div class="glass-card p-8 rounded-3xl group hover:border-blue-500/50 transition-all flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <div class="p-3 bg-rose-500/10 rounded-2xl text-rose-400">
+                                <i data-lucide="wind" class="w-6 h-6"></i>
                             </div>
-                            <div class="pt-2 text-sm font-semibold">
-                                <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition-colors inline-flex items-center gap-1">Publication <i data-lucide="external-link" class="w-3 h-3"></i></a>
-                            </div>
+                            <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank">
+                                <i data-lucide="arrow-up-right" class="text-slate-600 group-hover:text-rose-400 transition-colors"></i>
+                            </a>
                         </div>
-                        <div class="space-y-3">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">PyTorch</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">TIMM</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">Streamlit</span>
-                                <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-blue-400">Computer Vision</span>
-                            </div>
-                            <ul class="text-xs text-slate-500 space-y-1">
-                                <li>• Transfer learning on satellite imagery</li>
-                                <li>• Real-time inference via Streamlit</li>
-                            </ul>
+                        <h3 class="text-xl font-bold mb-3">Hurricane Intensity Estimation (CV)</h3>
+                        <ul class="text-slate-400 text-sm mb-6 space-y-2 list-disc list-inside border-b border-slate-800/50 pb-4">
+                            <li>Deep learning with 114K+ satellite images (PyTorch, TIMM).</li>
+                            <li>Transfer learning & Streamlit deployment.</li>
+                            <li>Published research in Natural Hazards journal.</li>
+                        </ul>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">PyTorch</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">TIMM</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">Streamlit</span>
+                            <span class="px-3 py-1 bg-slate-800 rounded-lg text-xs font-mono text-rose-400">OpenCV</span>
                         </div>
+                    </div>
+                    <div class="pt-2 text-sm font-semibold">
+                        <a href="https://link.springer.com/article/10.1007/s11069-026-08123-8" target="_blank" class="text-rose-400 hover:text-rose-300 transition-colors inline-flex items-center gap-1">Publication <i data-lucide="external-link" class="w-3 h-3"></i></a>
                     </div>
                 </div>
 
@@ -204,13 +242,13 @@
                         <div class="absolute w-3 h-3 bg-blue-500 rounded-full -left-[6px] top-1.5 shadow-[0_0_10px_#3b82f6]"></div>
                         <h4 class="font-bold">360DigiTMG</h4>
                         <p class="text-sm text-slate-400 mb-2 font-medium">Data Science & AI Trainee</p>
-                        <p class="text-xs text-slate-500 leading-relaxed">Built regression, classification, and clustering models using real-world datasets and SQL workflows.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Built regression, classification, clustering models; SQL workflows; MLOps foundations.</p>
                     </div>
                     <div class="relative pl-10">
                         <div class="absolute w-3 h-3 bg-slate-700 rounded-full -left-[6px] top-1.5"></div>
                         <h4 class="font-bold">Oasis Infobyte</h4>
                         <p class="text-sm text-slate-400 mb-2 font-medium">Python Programming Intern</p>
-                        <p class="text-xs text-slate-500 leading-relaxed">Developed modular Python applications focusing on core logic and debugging.</p>
+                        <p class="text-xs text-slate-500 leading-relaxed">Developed modular Python applications, core logic, debugging, and automation.</p>
                     </div>
                 </div>
             </div>
@@ -238,7 +276,7 @@
 
     <footer class="py-12 text-center border-t border-slate-900">
         <p class="text-slate-600 text-xs tracking-widest uppercase font-bold">
-            © 2026 Vyshnavi Sai Sri Vissa • Designed for the Future of AI
+            © 2026 Vyshnavi Sai Sri Vissa • MLOps · GenAI · Computer Vision
         </p>
     </footer>
 
